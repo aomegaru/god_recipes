@@ -3,9 +3,9 @@ God.watch do |w|
   w.group = 'global'
   w.interval = 30.minutes
   
-  w.start = '/etc/init.d/apache2 -k start'
-  w.restart = "/etc/init.d/apache2 -k restart"
-  w.stop = "/etc/init.d/apache2 -k stop"
+  w.start = '/etc/init.d/apache2 start'
+  w.restart = "/etc/init.d/apache2 restart"
+  w.stop = "/etc/init.d/apache2 stop"
   w.pid_file = '/var/run/apache2.pid'
   
   w.start_grace = 10.seconds
