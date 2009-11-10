@@ -1,0 +1,4 @@
+h1. My God Recipes
+
+Using Mojombo's God.
+http://god.rubyforge.org/
