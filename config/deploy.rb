@@ -27,7 +27,7 @@ namespace :deploy do
   # We restart the god server
   #
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "god quit"
-    run "cd #{release_path}; god -c god.rb"
+    run "#{sudo} god quit"
+    run "cd #{release_path}; #{sudo} god -c god.rb"
   end
 end
