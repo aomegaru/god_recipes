@@ -1,5 +1,7 @@
 #
 # The capistrano recipes to deploy god on servers
+# That task is pretty simple. Capistrano manages the code updating by itself
+# We only need to restart the God server
 #
 
 #
