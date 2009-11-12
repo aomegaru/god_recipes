@@ -21,6 +21,7 @@ end
 # The global recipes
 #
 require 'lib/apache'
+require 'lib/jesus'
 
 #
 # And in every project, we look for a potential god.rb file in the "god" directory and load it
