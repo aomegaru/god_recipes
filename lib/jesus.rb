@@ -5,7 +5,7 @@ God.watch do |w|
   w.group = 'global'
   w.interval = 30.minutes
   
-  w.start = "cd #{jesus_path}; /usr/local/bin/unicorn -D"
+  w.start = "cd #{jesus_path}; /usr/bin/unicorn -D"
   w.stop = "kill -QUIT `cat /tmp/jesus.pid`"
   w.restart = "kill -USR2 `cat /tmp/jesus.pid`"
   w.pid_file = "/tmp/jesus.pid"
