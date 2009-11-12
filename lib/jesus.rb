@@ -1,7 +1,7 @@
 God.watch do |w|
   jesus_path = ROOT + '/../jesus/'
   
-  w.name = 'Apache'
+  w.name = 'Jesus'
   w.group = 'global'
   w.interval = 30.minutes
   
