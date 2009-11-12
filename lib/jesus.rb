@@ -6,9 +6,9 @@ God.watch do |w|
   w.interval = 30.minutes
   
   w.start = "cd #{jesus_path}; sudo /usr/bin/unicorn -c unicorn.rb -D"
-  w.stop = "kill -QUIT `cat /tmp/jesus.pid`"
-  w.restart = "kill -USR2 `cat /tmp/jesus.pid`"
-  w.pid_file = "/tmp/jesus.pid"
+  w.stop = "kill -QUIT `cat #{jesus_path}/tmp/jesus.pid`"
+  w.restart = "kill -USR2 `cat #{jesus_path}/tmp/jesus.pid`"
+  w.pid_file = "#{jesus_path}/tmp/jesus.pid"
   
   w.start_grace = 10.seconds
   w.restart_grace = 10.seconds
