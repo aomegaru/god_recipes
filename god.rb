@@ -27,6 +27,6 @@ require 'lib/jesus'
 # And in every project, we look for a potential god.rb file in the "god" directory and load it
 # But we ignore the current directory
 #
-Dir[ROOT + '/../../*/'].each do |plugin|
-  load(File.join(plugin, 'god', 'god.rb')) if File.basename(plugin) != 'god' and File.directory?(plugin) and File.exists?(File.join(plugin, 'god', 'god.rb'))
+Dir[ROOT + '/../../../*/'].each do |plugin|
+  load(File.join(plugin, 'current', 'god', 'god.rb')) if File.basename(plugin) != 'god' and File.directory?(plugin) and File.exists?(File.join(plugin, 'current', 'god', 'god.rb'))
 end
