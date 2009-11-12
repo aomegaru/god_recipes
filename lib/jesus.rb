@@ -1,5 +1,5 @@
 God.watch do |w|
-  jesus_path = ROOT + '/../jesus/'
+  jesus_path = ROOT + '/../../../jesus/'
   
   w.name = 'Jesus'
   w.group = 'global'
