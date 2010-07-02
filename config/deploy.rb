@@ -15,6 +15,7 @@ set :application, 'My god recipes'
 set :repository,  'git@github.com:idylnet/god_recipes.git'
 set :scm, :git
 set :user, "dmathieu"
+set :use_sudo, false
 
 
 namespace :deploy do
@@ -31,7 +32,9 @@ namespace :deploy do
   # We restart the god server
   #
   task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{sudo} god quit"
-    run "cd #{release_path}; #{sudo} god -c god.rb"
+    #run "#{sudo} god quit"
+    run "cd #{current_path}; #{sudo} god -c god.rb"
   end
 end
+
+after 'deploy:update', 'deploy:restart'
