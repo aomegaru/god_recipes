@@ -7,7 +7,7 @@ God.watch do |w|
   w.restart = "service redis restart"
   w.start_grace = 20.seconds
   w.restart_grace = 20.seconds
-  w.pid_file = "/var/run/redis/redis.pid"
+  w.pid_file = "/var/run/redis.pid"
     
   w.behavior(:clean_pid_file)
 

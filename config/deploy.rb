@@ -32,7 +32,7 @@ namespace :deploy do
   # We restart the god server
   #
   task :restart, :roles => :app, :except => { :no_release => true } do
-    #run "#{sudo} god quit"
+    run "#{sudo} god quit"
     run "cd #{current_path}; #{sudo} god -c god.rb"
   end
 end
