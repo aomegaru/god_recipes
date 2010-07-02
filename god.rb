@@ -10,11 +10,14 @@ $: << File.dirname(__FILE__)
 #
 # Email notification settings
 #
-God::Contacts::Email.message_settings = { :from => 'god@predicteo.com' }
-God::Contacts::Email.server_settings = { :address => 'localhost', :port => 25 }
+God::Contacts::Email.defaults do |d|
+  d.from_email = 'noreply@dmathieu.com'
+  d.from_name = 'God'
+  d.delivery_method = :sendmail
+end
 God.contact(:email) do |c|
   c.name = 'damien'
-  c.email = '42@dmathieu.com'
+  c.to_email = '42@dmathieu.com'
 end
 
 #
