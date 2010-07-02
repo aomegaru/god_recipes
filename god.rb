@@ -4,7 +4,7 @@
 # There's no management here. Only inclusions
 #
 
-ROOT = File.join(File.dirname(__FILE__))
+ROOT = File.join(File.dirname(__FILE__)) unless defined? ROOT
 $: << File.dirname(__FILE__)
 
 #
