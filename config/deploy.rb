@@ -4,23 +4,27 @@
 # We only need to restart the God server
 #
 
-#
-# We have the staging and production servers
-#
-set :stages, %w(staging production)
-set :default_stage, 'staging'
-require 'capistrano/ext/multistage'
+set :deploy_to, "/home/dmathieu/god"
+role :app, "173.203.89.159"
+role :db, "173.203.89.159", :primary => true
 
 #
 # But the application remains always the same
 #
 set :application, 'My god recipes'
-set :repository,  'git@github.com:dmathieu/god.git'
+set :repository,  'git@github.com:idylnet/god_recipes.git'
 set :scm, :git
+set :user, "dmathieu"
 
 
 namespace :deploy do
   task :finalize_update do
+    # Removing the rails-centric task
+  end
+  task :migrate do
+    # Removing the rails-centric task
+  end
+  task :migrations do
     # Removing the rails-centric task
   end
   #
